@@ -3,7 +3,7 @@ name = "bsuite-core"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
-description = "Shared CLI plumbing library for the b-* command-line suite."
+description = "Shared types and helpers that the b-* command-line prompt-lookup tools link at build time."
 repository.workspace = true
 readme = "../../README.md"
 

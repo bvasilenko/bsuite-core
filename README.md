@@ -1,6 +1,8 @@
 # bsuite-core
 
-Shared building blocks for the b-* command-line suite. Trait surfaces + closed enums + value types that every `bground` / `banchor` / `bsmell` / `bratch` / `bwatch` / `bspector` binary consumes at build time.
+Shared types and helpers that the b-* command-line prompt-lookup tools link at build time.
+
+Trait surfaces + closed enums + value types that every `bground` / `banchor` / `bsmell` / `bratch` / `bwatch` / `bspector` binary consumes at build time.
 
 ```rust
 use bsuite_core::{RoutingKey, ExitCode, HostContext};
