@@ -1,0 +1,6 @@
+# Test material only. Do not use this key for production trust.
+[[keys]]
+key_id = "test-only-manifest-v1"
+verifying_key_base64 = "Md6+VdN8cidosTcTHKpghwgLLgtguUvXhdFFdc+kmLw="
+valid_from = "2020-01-01T00:00:00Z"
+valid_until = "2099-01-01T00:00:00Z"
