@@ -14,7 +14,8 @@ pub use corpus::{CorpusEntry, CorpusFile, ProvenanceRecord};
 pub use error::BsuiteCoreError;
 pub use exit_code::{ExitCode, ExitCodeEmitter};
 pub use manifest_overlay::{
-    ManifestOverlay, ManifestOverlayReader, OverlayMap, OverlayValidationError,
+    ALLOWED_OVERRIDE_KEYS, BinaryDefaults, FileSystemManifestOverlayReader, ManifestOverlay,
+    ManifestOverlayReader, OVERLAY_SCHEMA_VERSION, OverlayValidationError, OverrideMap,
 };
 pub use opacity_hook::{OpacityHookPublisher, TierEvidence};
 pub use prompt_resolver::{CorpusResolver, DirectiveString, EvidenceMap, PromptResolver};
