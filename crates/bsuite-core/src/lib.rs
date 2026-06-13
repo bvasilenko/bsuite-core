@@ -19,8 +19,10 @@ pub use manifest_overlay::{
 pub use opacity_hook::{OpacityHookPublisher, TierEvidence};
 pub use prompt_resolver::{CorpusResolver, DirectiveString, EvidenceMap, PromptResolver};
 pub use routing_key::RoutingKey;
-pub use transcript_writer::{TranscriptAppender, TranscriptHandle, TranscriptRecord};
+pub use transcript_writer::{
+    FileSystemTranscriptAppender, TranscriptAppender, TranscriptHandle, TranscriptRecord,
+};
 pub use upgrade_carrier::{
-    PlatformArtefact, PlatformId, SignedManifest, SignedManifestUpdater, TrustedKey, UpdateChannel,
-    UpdateOutcome, Updater,
+    FetchLimits, PlatformArtefact, PlatformId, SignedManifest, SignedManifestUpdater, TrustedKey,
+    UpdateChannel, UpdateOutcome, Updater,
 };

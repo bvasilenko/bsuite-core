@@ -10,6 +10,14 @@ pub enum BsuiteCoreError {
     Update(String),
     #[error("transcript append failed: {0}")]
     Transcript(String),
+    #[error("transcript path failed: {0}")]
+    TranscriptPathFailed(String),
+    #[error("transcript write failed: {0}")]
+    TranscriptWriteFailed(String),
+    #[error("transcript serialization failed: {0}")]
+    TranscriptSerializationFailed(String),
+    #[error("transcript manifest failed: {0}")]
+    TranscriptManifestFailed(String),
 
     #[error("manifest fetch failed: {0}")]
     ManifestFetchFailed(String),
