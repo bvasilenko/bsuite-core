@@ -1,0 +1,135 @@
+schema_version = 1
+signature = "ed25519:FRVf3mQktgc4CjDfkDr83aN8JNOrp802EpbRaQHQONThC92xesu/DRmikP8CYCMhY3oQqUTNWAZN0yPd9MKSBg=="
+canonical_key_id = "test-only-corpus-sample-v1"
+
+[[entries]]
+routing_key = "bground"
+directive = "bground directive 1: Stop and inspect the supplied evidence before acting. Name the exact file, command output, or record that supports the next step. If evidence is missing, report the missing evidence and do not replace it with a guess. Proceed only after the claim and the evidence point to the same narrow action."
+
+[entries.provenance]
+run_id = "test-only-bground-1"
+iteration = 1
+observation_source = "test-only-fixture"
+pre_compliance = 0.45
+post_compliance = 0.89
+
+[[entries]]
+routing_key = "bground"
+directive = "bground directive 2: Stop and inspect the supplied evidence before acting. Name the exact file, command output, or record that supports the next step. If evidence is missing, report the missing evidence and do not replace it with a guess. Proceed only after the claim and the evidence point to the same narrow action."
+
+[entries.provenance]
+run_id = "test-only-bground-2"
+iteration = 2
+observation_source = "test-only-fixture"
+pre_compliance = 0.5
+post_compliance = 0.93
+
+[[entries]]
+routing_key = "banchor"
+directive = "banchor directive 1: Stop and inspect the supplied evidence before acting. Name the exact file, command output, or record that supports the next step. If evidence is missing, report the missing evidence and do not replace it with a guess. Proceed only after the claim and the evidence point to the same narrow action."
+
+[entries.provenance]
+run_id = "test-only-banchor-1"
+iteration = 1
+observation_source = "test-only-fixture"
+pre_compliance = 0.45
+post_compliance = 0.89
+
+[[entries]]
+routing_key = "banchor"
+directive = "banchor directive 2: Stop and inspect the supplied evidence before acting. Name the exact file, command output, or record that supports the next step. If evidence is missing, report the missing evidence and do not replace it with a guess. Proceed only after the claim and the evidence point to the same narrow action."
+
+[entries.provenance]
+run_id = "test-only-banchor-2"
+iteration = 2
+observation_source = "test-only-fixture"
+pre_compliance = 0.5
+post_compliance = 0.93
+
+[[entries]]
+routing_key = "bsmell"
+directive = "bsmell directive 1: Stop and inspect the supplied evidence before acting. Name the exact file, command output, or record that supports the next step. If evidence is missing, report the missing evidence and do not replace it with a guess. Proceed only after the claim and the evidence point to the same narrow action."
+
+[entries.provenance]
+run_id = "test-only-bsmell-1"
+iteration = 1
+observation_source = "test-only-fixture"
+pre_compliance = 0.45
+post_compliance = 0.89
+
+[[entries]]
+routing_key = "bsmell"
+directive = "bsmell directive 2: Stop and inspect the supplied evidence before acting. Name the exact file, command output, or record that supports the next step. If evidence is missing, report the missing evidence and do not replace it with a guess. Proceed only after the claim and the evidence point to the same narrow action."
+
+[entries.provenance]
+run_id = "test-only-bsmell-2"
+iteration = 2
+observation_source = "test-only-fixture"
+pre_compliance = 0.5
+post_compliance = 0.93
+
+[[entries]]
+routing_key = "bratch"
+directive = "bratch directive 1: Stop and inspect the supplied evidence before acting. Name the exact file, command output, or record that supports the next step. If evidence is missing, report the missing evidence and do not replace it with a guess. Proceed only after the claim and the evidence point to the same narrow action."
+
+[entries.provenance]
+run_id = "test-only-bratch-1"
+iteration = 1
+observation_source = "test-only-fixture"
+pre_compliance = 0.45
+post_compliance = 0.89
+
+[[entries]]
+routing_key = "bratch"
+directive = "bratch directive 2: Stop and inspect the supplied evidence before acting. Name the exact file, command output, or record that supports the next step. If evidence is missing, report the missing evidence and do not replace it with a guess. Proceed only after the claim and the evidence point to the same narrow action."
+
+[entries.provenance]
+run_id = "test-only-bratch-2"
+iteration = 2
+observation_source = "test-only-fixture"
+pre_compliance = 0.5
+post_compliance = 0.93
+
+[[entries]]
+routing_key = "bwatch"
+directive = "bwatch directive 1: Stop and inspect the supplied evidence before acting. Name the exact file, command output, or record that supports the next step. If evidence is missing, report the missing evidence and do not replace it with a guess. Proceed only after the claim and the evidence point to the same narrow action."
+
+[entries.provenance]
+run_id = "test-only-bwatch-1"
+iteration = 1
+observation_source = "test-only-fixture"
+pre_compliance = 0.45
+post_compliance = 0.89
+
+[[entries]]
+routing_key = "bwatch"
+directive = "bwatch directive 2: Stop and inspect the supplied evidence before acting. Name the exact file, command output, or record that supports the next step. If evidence is missing, report the missing evidence and do not replace it with a guess. Proceed only after the claim and the evidence point to the same narrow action."
+
+[entries.provenance]
+run_id = "test-only-bwatch-2"
+iteration = 2
+observation_source = "test-only-fixture"
+pre_compliance = 0.5
+post_compliance = 0.93
+
+[[entries]]
+routing_key = "bspector"
+directive = "bspector directive 1: Stop and inspect the supplied evidence before acting. Name the exact file, command output, or record that supports the next step. If evidence is missing, report the missing evidence and do not replace it with a guess. Proceed only after the claim and the evidence point to the same narrow action."
+
+[entries.provenance]
+run_id = "test-only-bspector-1"
+iteration = 1
+observation_source = "test-only-fixture"
+pre_compliance = 0.45
+post_compliance = 0.89
+
+[[entries]]
+routing_key = "bspector"
+directive = "bspector directive 2: Stop and inspect the supplied evidence before acting. Name the exact file, command output, or record that supports the next step. If evidence is missing, report the missing evidence and do not replace it with a guess. Proceed only after the claim and the evidence point to the same narrow action."
+
+[entries.provenance]
+run_id = "test-only-bspector-2"
+iteration = 2
+observation_source = "test-only-fixture"
+pre_compliance = 0.5
+post_compliance = 0.93
