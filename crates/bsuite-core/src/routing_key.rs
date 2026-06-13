@@ -1,3 +1,10 @@
+use serde::{Deserialize, Deserializer, Serialize, Serializer, de};
+use std::fmt;
+
+const ROUTING_KEY_VARIANTS: &[&str] = &[
+    "bground", "banchor", "bsmell", "bratch", "bwatch", "bspector",
+];
+
 #[derive(Debug, Clone, Copy, Eq, PartialEq, Ord, PartialOrd, Hash)]
 pub enum RoutingKey {
     BGround,
@@ -51,5 +58,43 @@ impl RoutingKey {
             Self::BWatch => "bwatch",
             Self::BSpector => "bspector",
         }
+    }
+
+    pub fn from_stable_name(value: &str) -> Option<Self> {
+        match value {
+            "bground" => Some(Self::BGround),
+            "banchor" => Some(Self::BAnchor),
+            "bsmell" => Some(Self::BSmell),
+            "bratch" => Some(Self::BRatch),
+            "bwatch" => Some(Self::BWatch),
+            "bspector" => Some(Self::BSpector),
+            _ => None,
+        }
+    }
+}
+
+impl fmt::Display for RoutingKey {
+    fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
+        formatter.write_str(self.stable_name())
+    }
+}
+
+impl Serialize for RoutingKey {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: Serializer,
+    {
+        serializer.serialize_str(self.stable_name())
+    }
+}
+
+impl<'de> Deserialize<'de> for RoutingKey {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: Deserializer<'de>,
+    {
+        let value = String::deserialize(deserializer)?;
+        Self::from_stable_name(&value)
+            .ok_or_else(|| de::Error::unknown_variant(&value, ROUTING_KEY_VARIANTS))
     }
 }

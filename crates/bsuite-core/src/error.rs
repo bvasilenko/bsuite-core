@@ -1,3 +1,4 @@
+use crate::RoutingKey;
 use crate::manifest_overlay::OverlayValidationError;
 use thiserror::Error;
 
@@ -17,4 +18,12 @@ pub enum BsuiteCoreError {
     VisibilityEvidence(String),
     #[error("adapter host binding failed: {0}")]
     AdapterHostBinding(String),
+    #[error("corpus signature is invalid")]
+    CorpusSignatureInvalid,
+    #[error("corpus schema mismatch: expected {expected}, found {found}")]
+    CorpusSchemaMismatch { expected: u32, found: u32 },
+    #[error("corpus deserialization failed: {0}")]
+    CorpusDeserializationFailed(String),
+    #[error("corpus key is missing: {0}")]
+    CorpusKeyMissing(RoutingKey),
 }
