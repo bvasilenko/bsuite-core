@@ -9,16 +9,23 @@ readme = "../../README.md"
 
 [dependencies]
 base64.workspace = true
+chrono.workspace = true
 ed25519-dalek.workspace = true
 serde.workspace = true
 serde_json.workspace = true
 serde_json_canonicalizer.workspace = true
+reqwest.workspace = true
+semver.workspace = true
+sha2.workspace = true
+tar.workspace = true
 thiserror.workspace = true
 toml.workspace = true
 
 [dev-dependencies]
 criterion = "0.5"
 proptest.workspace = true
+httpmock.workspace = true
+tempfile.workspace = true
 
 [[bench]]
 name = "corpus_lookup"
