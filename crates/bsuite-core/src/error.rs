@@ -10,6 +10,35 @@ pub enum BsuiteCoreError {
     Update(String),
     #[error("transcript append failed: {0}")]
     Transcript(String),
+
+    #[error("manifest fetch failed: {0}")]
+    ManifestFetchFailed(String),
+    #[error("manifest signature fetch failed: {0}")]
+    SignatureFetchFailed(String),
+    #[error("manifest signature is invalid")]
+    ManifestSignatureInvalid,
+    #[error("manifest signing key is unknown: {0}")]
+    ManifestUnknownSigningKey(String),
+    #[error("manifest signing key is expired: {0}")]
+    ManifestSigningKeyExpired(String),
+    #[error("manifest signing key is not yet valid: {0}")]
+    ManifestSigningKeyNotYetValid(String),
+    #[error("manifest signing key is revoked: {0}")]
+    ManifestSigningKeyRevoked(String),
+    #[error("manifest schema mismatch: expected {expected}, found {found}")]
+    ManifestSchemaMismatch { expected: u32, found: u32 },
+    #[error("manifest platform is missing: {0}")]
+    ManifestPlatformMissing(String),
+    #[error("artifact fetch failed: {0}")]
+    ArtifactFetchFailed(String),
+    #[error("artifact sha256 mismatch: expected {expected}, found {found}")]
+    ArtifactSha256Mismatch { expected: String, found: String },
+    #[error("response body exceeds limit: limit {limit_bytes}, found {found_bytes}")]
+    ResponseBodyTooLarge { limit_bytes: u64, found_bytes: u64 },
+    #[error("atomic install failed: {0}")]
+    AtomicInstallFailed(String),
+    #[error("install rollback failed: {0}")]
+    InstallRollbackFailed(String),
     #[error("manifest overlay validation failed: {0}")]
     ManifestOverlay(#[from] OverlayValidationError),
     #[error("exit code emission failed: {0}")]

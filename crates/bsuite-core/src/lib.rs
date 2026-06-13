@@ -20,4 +20,7 @@ pub use opacity_hook::{OpacityHookPublisher, TierEvidence};
 pub use prompt_resolver::{CorpusResolver, DirectiveString, EvidenceMap, PromptResolver};
 pub use routing_key::RoutingKey;
 pub use transcript_writer::{TranscriptAppender, TranscriptHandle, TranscriptRecord};
-pub use upgrade_carrier::{UpdateChannel, UpdateOutcome, Updater};
+pub use upgrade_carrier::{
+    PlatformArtefact, PlatformId, SignedManifest, SignedManifestUpdater, TrustedKey, UpdateChannel,
+    UpdateOutcome, Updater,
+};
