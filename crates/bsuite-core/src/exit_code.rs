@@ -82,7 +82,11 @@ impl ExitCodeRouting for BsuiteCoreError {
             | BsuiteCoreError::CorpusSignatureInvalid
             | BsuiteCoreError::CorpusSchemaMismatch { .. }
             | BsuiteCoreError::CorpusDeserializationFailed(_)
-            | BsuiteCoreError::CorpusKeyMissing(_) => ExitCode::InternalError,
+            | BsuiteCoreError::CorpusKeyMissing(_)
+            | BsuiteCoreError::OpacitySectionMissing(_)
+            | BsuiteCoreError::OpacityTomlParseFailed(_)
+            | BsuiteCoreError::OpacityTierMismatch { .. }
+            | BsuiteCoreError::OpacitySchemaMismatch { .. } => ExitCode::InternalError,
         }
     }
 }
@@ -230,5 +234,9 @@ fn error_variant_name(err: &BsuiteCoreError) -> &'static str {
         BsuiteCoreError::CorpusSchemaMismatch { .. } => "CorpusSchemaMismatch",
         BsuiteCoreError::CorpusDeserializationFailed(_) => "CorpusDeserializationFailed",
         BsuiteCoreError::CorpusKeyMissing(_) => "CorpusKeyMissing",
+        BsuiteCoreError::OpacitySectionMissing(_) => "OpacitySectionMissing",
+        BsuiteCoreError::OpacityTomlParseFailed(_) => "OpacityTomlParseFailed",
+        BsuiteCoreError::OpacityTierMismatch { .. } => "OpacityTierMismatch",
+        BsuiteCoreError::OpacitySchemaMismatch { .. } => "OpacitySchemaMismatch",
     }
 }

@@ -63,4 +63,12 @@ pub enum BsuiteCoreError {
     CorpusDeserializationFailed(String),
     #[error("corpus key is missing: {0}")]
     CorpusKeyMissing(RoutingKey),
+    #[error("opacity section missing: {0}")]
+    OpacitySectionMissing(String),
+    #[error("opacity TOML parse failed: {0}")]
+    OpacityTomlParseFailed(String),
+    #[error("opacity tier mismatch: expected {expected}, found {found}")]
+    OpacityTierMismatch { expected: String, found: String },
+    #[error("opacity schema mismatch: expected {expected}, found {found}")]
+    OpacitySchemaMismatch { expected: u32, found: u32 },
 }
