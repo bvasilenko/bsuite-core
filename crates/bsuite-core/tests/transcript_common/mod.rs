@@ -2,6 +2,7 @@ use bsuite_core::{HostContext, RoutingKey, TranscriptRecord};
 use chrono::Utc;
 use serde_json::{Value, json};
 
+#[allow(dead_code)]
 pub fn today_manifest_name() -> String {
     format!("manifest-{}.txt", Utc::now().format("%Y-%m-%d"))
 }
