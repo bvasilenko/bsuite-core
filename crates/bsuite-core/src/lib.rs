@@ -17,7 +17,12 @@ pub use manifest_overlay::{
     ALLOWED_OVERRIDE_KEYS, BinaryDefaults, FileSystemManifestOverlayReader, ManifestOverlay,
     ManifestOverlayReader, OVERLAY_SCHEMA_VERSION, OverlayValidationError, OverrideMap,
 };
-pub use opacity_hook::{OpacityHookPublisher, TierEvidence};
+pub use opacity_hook::{
+    OpacityHookPublisher, TierEvidence, TierProbes,
+    OPACITY_SECTION_ELF, OPACITY_SECTION_MACHO, OPACITY_SECTION_PE,
+};
+#[cfg(feature = "verify")]
+pub use opacity_hook::{validate_tier_evidence_toml, verify_tier_evidence};
 pub use prompt_resolver::{CorpusResolver, DirectiveString, EvidenceMap, PromptResolver};
 pub use routing_key::RoutingKey;
 pub use transcript_writer::{
