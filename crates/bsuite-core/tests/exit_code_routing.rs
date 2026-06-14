@@ -51,8 +51,14 @@ fn all_internal_error_variants() -> Vec<BsuiteCoreError> {
         BsuiteCoreError::CorpusKeyMissing(RoutingKey::BGround),
         BsuiteCoreError::OpacitySectionMissing("x".into()),
         BsuiteCoreError::OpacityTomlParseFailed("x".into()),
-        BsuiteCoreError::OpacityTierMismatch { expected: "a".into(), found: "b".into() },
-        BsuiteCoreError::OpacitySchemaMismatch { expected: 1, found: 2 },
+        BsuiteCoreError::OpacityTierMismatch {
+            expected: "a".into(),
+            found: "b".into(),
+        },
+        BsuiteCoreError::OpacitySchemaMismatch {
+            expected: 1,
+            found: 2,
+        },
     ]
 }
 
