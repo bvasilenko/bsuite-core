@@ -37,7 +37,8 @@ fn concurrent_appends_preserve_files_and_manifest_entries() {
                 .is_some_and(|extension| extension == "jsonl")
         })
         .count();
-    let manifest = std::fs::read_to_string(base.join("manifest-2026-06-13.txt")).unwrap();
+    let manifest_name = format!("manifest-{}.txt", chrono::Utc::now().format("%Y-%m-%d"));
+    let manifest = std::fs::read_to_string(base.join(&manifest_name)).unwrap();
 
     assert_eq!(transcript_count, 8);
     assert_eq!(manifest.lines().count(), 8);
